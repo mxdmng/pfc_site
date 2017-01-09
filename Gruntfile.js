@@ -4,9 +4,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'application/static/scss',
+          cwd: 'scss',
           src: ['style.scss'],
-          dest: 'application/static/css',
+          dest: 'css',
           ext: '.css'
         }]
       }
@@ -18,10 +18,10 @@ module.exports = function(grunt) {
       },
       combine: {
         files: {
-          'application/static/css/style.min.css': [
-            "application/static/css/normalize.min.css",
-            "application/static/css/slick.css",
-            "application/static/css/style.css",
+          'css/style.min.css': [
+            "css/normalize.min.css",
+            "css/slick.css",
+            "css/style.css",
           ]
         }
       }
@@ -31,10 +31,10 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'application/static/js/main.min.js': [
-            'application/static/js/lib/jquery.min.js',
-            'application/static/js/*.js',
-            "!application/static/js/main.min.js"
+          'js/main.min.js': [
+            'js/lib/jquery.min.js',
+            'js/*.js',
+            "!js/main.min.js"
           ]
         }
       }
@@ -42,12 +42,12 @@ module.exports = function(grunt) {
 
     watch: {
       css: {
-        files: ['application/static/**/*.scss'],
+        files: ['scss/*.scss'],
         tasks: ['sass', 'cssmin'] //
       },
 
       js: {
-        files: ['application/static/**/*.js', "!application/static/js/main.min.js"],
+        files: ['**/*.js', "!js/main.min.js"],
         tasks: ['uglify']
       },
 
