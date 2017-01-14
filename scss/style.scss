@@ -20,7 +20,7 @@ h1, h2, h3, p {
 }
 
 h1 {
-
+	color: $white;
 }
 
 h2 {
@@ -43,66 +43,98 @@ a {
 }
 
 #page-container {
-	> div {
-		width: 80%;
+	.header-banner {
+		background-color: $teal;
+		width: 100%;
+		height: 480px;
+		margin-bottom: 5%;
+		> div {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	.main-nav {
+		width: 100%;
 		margin: 0 auto;
-		padding: 0;
-	}
-}
-
-.header-banner {
-	background-color: $teal;
-	width: 100%;
-	height: 480px;
-}
-
-.main-nav {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline-block;
-	}
-	a {
-		color: $white;
-		text-transform: uppercase;
-		&:hover {
-			border-bottom: 0.175em solid $yellow;
+		padding-top: 1.25em;
+		text-align: right;
+		ul {
+			width: 100%;
+			padding: 0;
+		}
+		li {
+			width: 9%;
+			display: inline-block;
+			text-align: center;
+		}
+		.main-nav-logo {
+			position: absolute;
+			left: 10%;
+		}
+		a {
+			color: $white;
+			text-transform: uppercase;
+			&:hover {
+				border-bottom: 0.175em solid $yellow;
+			}
 		}
 	}
-}
 
-.main-nav-logo {
-	width: 20%;
-}
-
-.section-container {
-	background-color: $white;
-	height: 480px;
-
-	.section-title {
-		text-align: center;
-		h2 {
-			padding-bottom: 1em;
+	.section-container {
+		background-color: $white;
+		height: 480px;
+		> div {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
 		}
-		h3 {
-			font-weight: 100;
-			padding-bottom: 0.5em;
+
+		.section-title {
+			text-align: center;
+			h2 {
+				padding-bottom: 1em;
+			}
+			h3 {
+				font-weight: 100;
+				padding-bottom: 0.5em;
+			}
+			.header-divider {
+				width: 5%;
+				margin: 0 auto;
+				margin-bottom: 2em;
+				border-bottom: 0.25em solid $orange;
+			}
 		}
+		.section-content{
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 2.5em;
+		}
+
 	}
-	.section-content{
-		width: 80%;
-		margin: 0 auto;
-		text-align: center;
+
+	.section-numbers {
+		width: 100%;
+		background-color: $orange;
+		height: 200px;
+		margin-bottom: 5%;
 	}
+	
 	.img-grid {
 		width: 100%;
+		margin: 0 auto;
 		.img-grid-img {
-			width: 30%;
-			padding: 0.5em;
+			width: calc(30% - 1em);
+			padding-right: 1em;
 			display: inline-block;
 			> img {
 				width: 100%;
+			}
+			p {
+				text-transform: uppercase;
+				text-align: left;
 			}
 		}
 	}
